@@ -31,7 +31,13 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+		char[] new_string = input.toCharArray();
+		for(int i = 0; i < (input.length() - 2); i++){
+			new_string[i] = input.charAt(i + 2);
+		}
+		new_string[input.length() - 2] = input.charAt(0);
+		new_string[input.length() - 1] = input.charAt(1);
+	  	return String.valueOf(new_string);
 	}
 	
 	/**
@@ -45,5 +51,4 @@ public class Person1 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
-
 }
