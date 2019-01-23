@@ -54,6 +54,6 @@ public class Person3 {
             temparray[right]=temp;
         }
 
-        return temparray.toString();
+        return new String(temparray);
     }
 }
